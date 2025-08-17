@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-Ray Medical Analysis System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>X-Ray Medical Analysis System</h1>
+        </header>
+        
+        <div class="main-content">
+            <!-- Left Section -->
+            <div class="left-panel">
+                <div class="image-section">
+                    <h2>X-Ray Image</h2>
+                    <div class="image-upload-area" id="imageUploadArea">
+                        <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                        <div class="upload-placeholder" id="uploadPlaceholder">
+                            <div class="upload-icon">📷</div>
+                            <p>Click to upload X-Ray image</p>
+                        </div>
+                        <img id="uploadedImage" style="display: none;" alt="Uploaded X-Ray">
+                    </div>
+                </div>
+                
+                <div class="demographics-section">
+                    <h3>Demographics</h3>
+                    <div class="form-group">
+                        <label for="patientName">Patient Name:</label>
+                        <input type="text" id="patientName" placeholder="Enter patient name">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="patientAge">Age:</label>
+                            <input type="number" id="patientAge" placeholder="Age">
+                        </div>
+                        <div class="form-group">
+                            <label for="patientGender">Gender:</label>
+                            <select id="patientGender">
+                                <option value="">Select</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="patient-info-section">
+                    <h3>Patient Information</h3>
+                    <div class="form-group">
+                        <label for="patientId">Patient ID:</label>
+                        <input type="text" id="patientId" placeholder="Enter patient ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="studyDate">Study Date:</label>
+                        <input type="date" id="studyDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="referringPhysician">Referring Physician:</label>
+                        <input type="text" id="referringPhysician" placeholder="Enter physician name">
+                    </div>
+                </div>
+                
+                <div class="caption-section">
+                    <h3>AI Generated Caption</h3>
+                    <div class="caption-display" id="captionDisplay">
+                        <p class="placeholder-text">Upload an X-Ray image to generate AI analysis...</p>
+                    </div>
+                    <button id="generateCaptionBtn" class="btn btn-primary" disabled>Generate Analysis</button>
+                </div>
+            </div>
+            
+            <!-- Right Section -->
+            <div class="right-panel">
+                <div class="history-section">
+                    <h3>Patient History</h3>
+                    <textarea id="patientHistory" placeholder="Enter patient medical history, symptoms, previous conditions, current medications, etc."></textarea>
+                </div>
+                
+                <div class="findings-section">
+                    <h3>Findings</h3>
+                    <textarea id="findings" placeholder="Enter detailed findings from the X-Ray analysis..."></textarea>
+                </div>
+                
+                <div class="diagnosis-section">
+                    <h3>Case Diagnosis</h3>
+                    <textarea id="caseDiagnosis" placeholder="Enter the final diagnosis and recommendations..."></textarea>
+                </div>
+                
+                <div class="actions-section">
+                    <button id="saveCaseBtn" class="btn btn-secondary">Save Case</button>
+                    <button id="generateReportBtn" class="btn btn-primary">Generate PDF Report</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

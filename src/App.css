@@ -1,0 +1,109 @@
+/* Additional App-specific styles */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 600px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+  
+  .mobile-stack {
+    flex-direction: column !important;
+  }
+  
+  .mobile-full-width {
+    width: 100% !important;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .tablet-hidden {
+    display: none !important;
+  }
+}
+
+/* Large screen styles */
+@media (min-width: 1025px) {
+  .desktop-only {
+    display: block !important;
+  }
+}
+
+/* Animation utilities */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 0.5s ease-out;
+}
+
+/* Medical theme colors */
+:root {
+  --medical-blue: #1976d2;
+  --medical-red: #dc004e;
+  --medical-green: #388e3c;
+  --medical-orange: #f57c00;
+  --medical-gray: #666;
+  --medical-light-blue: #e3f2fd;
+  --medical-light-red: #fce4ec;
+  --medical-light-green: #e8f5e8;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.2);
+  --shadow-heavy: rgba(0, 0, 0, 0.3);
+}
+
+/* Utility classes for common medical app patterns */
+.medical-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--shadow-light);
+  transition: box-shadow 0.3s ease;
+}
+
+.medical-card:hover {
+  box-shadow: 0 4px 16px var(--shadow-medium);
+}
+
+.medical-primary {
+  color: var(--medical-blue);
+}
+
+.medical-secondary {
+  color: var(--medical-red);
+}
+
+.medical-success {
+  color: var(--medical-green);
+}
+
+.medical-warning {
+  color: var(--medical-orange);
+}
