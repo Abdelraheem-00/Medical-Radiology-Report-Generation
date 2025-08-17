@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:12fb6aef14b0f93d7bd8f61f2aacfcaf4624ebda25249b4339afc0b7ae1dd7a1
-size 2269
+# 🏥 Medical Radiology Report Generation  
+
+This project aims to **automatically generate medical radiology reports** from chest X-ray images using deep learning and natural language processing (NLP).  
+The system leverages a **CNN-based image encoder** and a **transformer-based language decoder** to generate accurate and descriptive radiology reports that can assist radiologists in clinical diagnosis.  
+
+---
+
+## 📌 Features
+- ✅ Automatic generation of radiology reports from medical images (e.g., chest X-rays).  
+- ✅ Preprocessing pipeline for DICOM / PNG medical images.  
+- ✅ Image encoder (CNN / Vision Transformer) for medical image feature extraction.  
+- ✅ Report decoder (LSTM / Transformer / GPT-like) for text generation.  
+- ✅ Evaluation metrics (BLEU, ROUGE, METEOR, CIDEr).  
+- ✅ Easy-to-use inference script to generate reports for new images.  
+
+---
+
+## 📂 Project Structure
