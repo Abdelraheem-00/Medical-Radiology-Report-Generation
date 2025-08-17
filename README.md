@@ -17,7 +17,7 @@ The goal is to reduce the workload on radiologists, improve reporting efficiency
 
 ## 🛠️ Tech Stack
 - **Frontend**: React.js  
-- **Backend**: Python (Flask / FastAPI) or Odoo (custom module)  
+- **Backend**: Python (Flask / FastAPI) 
 - **Machine Learning**: PyTorch / TensorFlow  
 ---
 
@@ -25,9 +25,8 @@ The goal is to reduce the workload on radiologists, improve reporting efficiency
 
 Medical-Radiology-Report-Generation/
 │── frontend/ # React.js UI
-│── backend/ # Flask/FastAPI or Odoo integration
+│── backend/ # Flask/FastAPI 
 │── models/ # Trained ML models for image analysis and NLP
-│── datasets/ # Sample datasets for testing
 │── reports/ # Generated medical reports
 │── docs/ # Documentation & references
 
