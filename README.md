@@ -24,11 +24,11 @@ The goal is to reduce the workload on radiologists, improve reporting efficiency
 ## 📂 Project Structure
 
 Medical-Radiology-Report-Generation/
-│── frontend/ # React.js UI
-│── backend/ # Flask/FastAPI 
-│── models/ # Trained ML models for image analysis and NLP
-│── reports/ # Generated medical reports
-│── docs/ # Documentation & references
+- │── frontend/ # React.js UI
+- │── backend/ # Flask/FastAPI 
+- │── models/ # Trained ML models for image analysis and NLP
+- │── reports/ # Generated medical reports
+- │── docs/ # Documentation & references
 
 ---
 
