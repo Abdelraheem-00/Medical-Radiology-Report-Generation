@@ -1,19 +1,3 @@
-#!/bin/bash
-
-# Start the React app in demo mode (mock mode enabled)
-echo "🚀 Starting MedRadio AI in Demo Mode..."
-echo "📱 Demo mode uses realistic sample data and works completely offline"
-echo "🌐 Opening browser at http://localhost:3000/?mock=true"
-echo ""
-echo "💡 You can toggle between Demo Mode and Backend Mode using the settings in the top-right corner"
-echo ""
-
-# Open browser with mock mode enabled
-if command -v xdg-open > /dev/null; then
-    xdg-open "http://localhost:3000/?mock=true" &
-elif command -v open > /dev/null; then
-    open "http://localhost:3000/?mock=true" &
-fi
-
-# Start the development server
-npm run dev -- --port 3000
+version https://git-lfs.github.com/spec/v1
+oid sha256:0d8517d42b24d76eebf077d10bbe4ac6e4d64c2ba2f5079ed775a5ab292af2f7
+size 656

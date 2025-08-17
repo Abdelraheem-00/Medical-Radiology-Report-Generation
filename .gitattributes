@@ -1,0 +1,14 @@
+public filter=lfs diff=lfs merge=lfs -text
+README.md filter=lfs diff=lfs merge=lfs -text
+Backend filter=lfs diff=lfs merge=lfs -text
+index.html filter=lfs diff=lfs merge=lfs -text
+package.json filter=lfs diff=lfs merge=lfs -text
+start_demo.sh filter=lfs diff=lfs merge=lfs -text
+start_frontend.sh filter=lfs diff=lfs merge=lfs -text
+dist filter=lfs diff=lfs merge=lfs -text
+vite.config.js filter=lfs diff=lfs merge=lfs -text
+frontend.pid filter=lfs diff=lfs merge=lfs -text
+src filter=lfs diff=lfs merge=lfs -text
+USAGE.md filter=lfs diff=lfs merge=lfs -text
+eslint.config.js filter=lfs diff=lfs merge=lfs -text
+package-lock.json filter=lfs diff=lfs merge=lfs -text
