@@ -2,24 +2,50 @@
 
 ## 📌 Overview
 Medical Radiology Report Generation is an AI-powered project designed to assist in **automatically generating medical radiology reports** from imaging data.  
-The goal is to reduce the workload on radiologists, improve reporting efficiency, and minimize human errors by leveraging **machine learning and natural language processing (NLP)**.
+The goal is to reduce the workload on radiologists, improve reporting efficiency, and minimize time by leveraging **Computer Vision and natural language processing (NLP)**.
 
 ---
 
 ## 🚀 Features
-- 📷 **Medical Image Processing**: Handles radiology image data (X-rays, CT scans, MRIs, etc.).
-- 🧠 **Deep Learning Models**: Extracts key features from medical images.
-- ✍️ **NLP-based Report Generation**: Automatically generates structured medical reports.
-- 🌐 **Web Interface (React + Flask/Odoo backend)**: Simple and intuitive UI for uploading scans and receiving reports.
-- 📊 **Customizable Reports**: Doctors can edit and approve generated reports.
-
+- ✅ Text preprocessing with **Word2Vec embeddings**  
+- ✅ Image preprocessing & **augmentation** for robustness  
+- ✅ **EfficientNet** as the image encoder  
+- ✅ Transformer **encoder–decoder architecture** for report generation  
+- ✅ Evaluation with **BLEU, ROUGE, and BERTScore**  
+- ✅ Demo app with **(React + Flask/Odoo backend)** for uploading X-rays and generating reports
 ---
 
 ## 🛠️ Tech Stack
 - **Frontend**: React.js  
 - **Backend**: Python (Flask / FastAPI) 
-- **Machine Learning**: PyTorch / TensorFlow  
+- **Deep Learning**: PyTorch 
 ---
+## Model Architecture
+X-ray Image → EfficientNet (Image Encoder) → Transformer Encoder
+Report Text → Word2Vec Embedding → Transformer Decoder → Generated Report
+---
+
+## 📊 Results
+
+The model was evaluated on the test set using standard text generation metrics:
+
+| Metric      | Score   |
+|-------------|---------|
+| **BLEU-1**  | 0.3891  |
+| **BLEU-2**  | 0.1783  |
+| **BLEU-3**  | 0.1055  |
+| **BLEU-4**  | 0.0696  |
+| **METEOR**  | 0.3696  |
+| **ROUGE-1** | 0.4275  |
+| **ROUGE-2** | 0.1849  |
+| **ROUGE-L** | 0.3238  |
+| **BERTScore** | 0.8588 |
+
+✅ **Interpretation**:  
+- Higher **BLEU-1** shows decent unigram overlap with ground truth reports.  
+- **ROUGE-1/2/L** capture strong recall of medical terms.  
+- **BERTScore (0.86)** indicates high **semantic similarity** between generated and reference reports.  
+
 
 ## 📂 Project Structure
 
